@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soaacth</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('beach.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .banner img {
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .banner span {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .top-right-baby {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="baby1.png" alt="Baby 1" onclick="playMusic()">
+        <span>HHiion</span>
+        <img src="baby2.png" alt="Baby 2" onclick="playFart()">
+    </div>
+    <img src="baby3.jpg" alt="Top Right Baby" class="top-right-baby" onclick="playFart()">
+    <audio id="fartSound" src="fart.mp3"></audio>
+    <audio id="musicSound" src="music.mp3"></audio>
+    <script>
+        function playFart() {
+            document.getElementById('fartSound').play();
+        }
+        function playMusic() {
+            document.getElementById('musicSound').play();
+        }
+    </script>
+</body>
+</html>
